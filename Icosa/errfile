@@ -1,0 +1,5 @@
+rm -f Icosa *.o  core
+c++ -g  -c Icosa.cpp `sdl-config --cflags`
+cc -g -c gl2ps.c 
+c++ -g -o Icosa Icosa.o  gl2ps.o  \
+	 `sdl-config --libs` -lGL -lGLU -lgltt -lttf  -lm
